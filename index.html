@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299.74">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Cutters Choice Radio&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--brand-teal: #5A8785;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg-dark: #111;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text-light: #fafafa;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text-light);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.4;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #000;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header .title h1 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 5.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header .title .tagline {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2.3rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.schedule h3 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid var(--brand-teal);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-top: 0.6rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1.4rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#mixcloud-list {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow-y: visible;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-right: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>scroll-behavior: smooth;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #000;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#mixcloud-list .mixcloud-container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #000;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#mixcloud-list iframe {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 180px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #000;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.delete-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>top: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>right: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--brand-teal);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 2px 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.add-mixcloud {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 1rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.add-mixcloud input {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 80%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 600px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.add-mixcloud button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.5rem 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--brand-teal);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer.banner {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--brand-teal);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer.banner a {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #000;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.4rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.5rem 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: color 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer.banner a:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>header .title h1 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>header .title .tagline {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.4rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.add-mixcloud input {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 95%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.add-mixcloud button {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>footer.banner {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img class="logo" src="https://i.imgur.com/3eKO6TQ.png" alt="Cutters Choice Radio Logo" style="width:100%; max-width:250px; height:auto; margin-bottom:0.5rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;Cutters Choice Radio&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="tagline"&gt;The home of relentless flavas and significant bangers!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img class="logo" src="https://i.imgur.com/3eKO6TQ.png" alt="Cutters Choice Radio Logo" style="width:100%; max-width:250px; height:auto; margin-bottom:0.5rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
+<p class="p1">&lt;div class="teal-line"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="grid-container"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="chat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Cutters Chat&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;iframe title="Cutters Choice Radio Chat" src="https://app.radiocult.fm/embed/chat/cutters-choice-radio?theme=midnight&amp;primaryColor=%235A8785&amp;corners=sharp" width="100%" height="700" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" seamless&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="live-player"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Live Now&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="player-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;iframe id="inlinePlayer" title="Cutters Choice Radio player" src="https://app.radiocult.fm/embed/square-player/cutters-choice-radio?theme=midnight&amp;primaryColor=%235A8785&amp;corners=sharp" allow="autoplay" style="width:100%; height:100px; margin-top:5px; border:none; border-radius:4px;"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="now-archive" style="font-weight: bold; color: #5A8785; font-size: 1.2rem; margin-top: 0.5rem;"&gt;Loading archive show…&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="popOutBtn" style="margin-top:10px; padding:0.5rem 2rem; font-size:1rem;"&gt;Pop Out Player&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3 id="now-dj"&gt;Loading current show…&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;img id="now-art" src="https://i.imgur.com/EHhS47F.png" alt="Current DJ Artwork" style="width:100%; max-width:700px; margin-top:0.5rem; border-radius:4px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="schedule"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="schedule-heading"&gt;This Week’s Lineup&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="schedule-scroll" id="schedule-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Loading this week’s schedule…&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="mixcloud"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Latest Archived Shows&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="mixcloud-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/doubledotdash/the-doubledotdash-radio-show-on-cutters-choice-radio-28042025/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/glitter_tits/the-mojo-dojo-cara-house-on-ccr-25425/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/the-benny-fonz-mws-session-230425/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/marionette-faux-archie-its-not-tasmania/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/Qualitychoicevideoclub/quality-choice-video-club-w-eurotrash-steve-4-19-2025/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/bass-beats-bleeps-wwesthamdave-the-full-12-inches-back-to-the-old-skool/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/markottaway/sparkie-live-from-the-funky-earworm-26-4-2025/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/tanookify-thursday-session-in-newish-breaks-we-trust-17042025-cutters-choice-radio/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/the-beat-side-ladies-of-hip-hop-425-cutters-choice-radio/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/nickrayman/independent-groove-202-april-2025/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/orson-filterpunks-5425-techno-show-cutters-choice-radio/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/dj-ojs-8-bit-mixup-03-04-25/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/cosmosis-wdj-seanicus-1-ccr-debut/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/the-mobeats-experience-cutters-choice-live-93-95-jungle-mix/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/chris-b-the-eclectic-session/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/doubledotdash/the-doubledotdash-radio-show-on-cutters-choice-radio-10032025/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/fonz-on-friday-070325/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/glitter_tits/the-mojo-dojo-iwd-dream-house-on-ccr-6325/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/robnoxious-d-friday-night-extravaganza-1900-02282025/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/funkbudha-warehouse-session-cheeky-hour-acid-house-23225/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/bass-beats-bleeps-wwesthamdave-the-full-12-inches-lucky-dip-71/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/midwich-youth-club-post-human-necromancy-ritual-20022025/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/marionette-plays-bitchin-beats-live-cutters-choice-mix-31-01-25/"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/matt-style-twig-89-degrees/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/paul-wright-all-shook-up-2/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/jbsd-the-other-music-show-/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/barrcode-live-und-direkt-1/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/armands-melkis-get-in-the-groove/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/collins303-radio303-14_00/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/mr-no-hands-funk-fuelled-party-mayhem/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/sam-g-inner-city-moods/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/fastoslow-the-bohemian-breakfast/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/dutti-b-dutti-eardrums/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/archietech-the-tasmanian-connection/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mixcloud-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=https://www.mixcloud.com/CuttersChoiceRadio/country-cockney-sunday-breaks-sessions/"&gt;&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="add-mixcloud"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input id="mixcloud-url" type="text" placeholder="Paste Mixcloud URL here..." /&gt;&lt;br /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="addMixcloud()"&gt;Add Show&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;&lt;footer class="banner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#merch"&gt;Merch&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#djs"&gt;Our DJs&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#events"&gt;Events&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#history"&gt;History&lt;/a&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script src="https://widget.mixcloud.com/widget.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const API_KEY = "pk_0b8abc6f834b444f949f727e88a728e0";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const STATION_ID = "cutters-choice-radio";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const BASE_URL = "https://api.radiocult.fm/api";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const FALLBACK_ART = "https://i.imgur.com/qWOfxOS.png";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const MIXCLOUD_PASSWORD = "cutters44";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function createGoogleCalLink(title, startUtc, endUtc) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!startUtc || !endUtc) return "#";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const fmt = dt =&gt; new Date(dt).toISOString().replace(/[-:]|\.\d{3}/g, "");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=${encodeURIComponent(title)}&amp;dates=${fmt(startUtc)}/${fmt(endUtc)}&amp;details=Tune in live at https://cutterschoiceradio.com&amp;location=https://cutterschoiceradio.com`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>async function rcFetch(path) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const res = await fetch(BASE_URL + path, {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>headers: { "x-api-key": API_KEY }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!res.ok) throw new Error(res.status);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return res.json();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>async function fetchLiveNow() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const { result } = await rcFetch(`/station/${STATION_ID}/schedule/live`);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const md = result.metadata || {}, ct = result.content || {};</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("now-dj").textContent = md.artist ? `${md.artist} – ${md.title}` : (ct.title || "No live show");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("now-art").src = md.artwork_url || FALLBACK_ART;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} catch (e) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("now-dj").textContent = "Error fetching live info";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("now-art").src = FALLBACK_ART;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>async function fetchWeeklySchedule() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const container = document.getElementById("schedule-container");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>container.innerHTML = "&lt;p&gt;Loading this week's schedule…&lt;/p&gt;";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const now = new Date();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const then = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const { schedules } = await rcFetch(`/station/${STATION_ID}/schedule?startDate=${now.toISOString()}&amp;endDate=${then.toISOString()}`);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!schedules.length) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>container.innerHTML = "&lt;p&gt;No shows scheduled this week.&lt;/p&gt;";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const byDay = schedules.reduce((acc, ev) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const day = new Date(ev.startDateUtc).toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "short" });</p>
+<p class="p1"><span class="Apple-converted-space">          </span>(acc[day] = acc[day] || []).push(ev);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>return acc;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}, {});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>container.innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const fmtTime = iso =&gt; new Date(iso).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (const [day, events] of Object.entries(byDay)) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const h3 = document.createElement("h3");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>h3.textContent = day;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>container.appendChild(h3);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const ul = document.createElement("ul");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>ul.style.listStyle = "none";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>ul.style.padding = "0";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>for (const ev of events) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const li = document.createElement("li");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>li.style.marginBottom = "1rem";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const wrapper = document.createElement("div");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>wrapper.style.display = "flex";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>wrapper.style.alignItems = "center";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>wrapper.style.gap = "8px";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const time = document.createElement("strong");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>time.textContent = `${fmtTime(ev.startDateUtc)}–${fmtTime(ev.endDateUtc)}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>wrapper.appendChild(time);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const title = document.createElement("span");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>title.textContent = ev.title;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>wrapper.appendChild(title);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const art = ev.metadata?.artwork?.default || ev.metadata?.artwork?.original;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (art) {</p>
+<p class="p1"><span class="Apple-converted-space">              </span>const img = document.createElement("img");</p>
+<p class="p1"><span class="Apple-converted-space">              </span>img.src = art;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>img.alt = `${ev.title} artwork`;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>img.style.cssText = "width:30px;height:30px;object-fit:cover;border-radius:3px;";</p>
+<p class="p1"><span class="Apple-converted-space">              </span>wrapper.appendChild(img);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!/archive/i.test(ev.title)) {</p>
+<p class="p1"><span class="Apple-converted-space">              </span>const calBtn = document.createElement("a");</p>
+<p class="p1"><span class="Apple-converted-space">              </span>calBtn.href = createGoogleCalLink(ev.title, ev.startDateUtc, ev.endDateUtc);</p>
+<p class="p1"><span class="Apple-converted-space">              </span>calBtn.target = "_blank";</p>
+<p class="p1"><span class="Apple-converted-space">              </span>calBtn.innerHTML = "📅";</p>
+<p class="p1"><span class="Apple-converted-space">              </span>calBtn.style.cssText = "font-size:1.4rem; text-decoration:none; margin-left:6px;";</p>
+<p class="p1"><span class="Apple-converted-space">              </span>wrapper.appendChild(calBtn);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>li.appendChild(wrapper);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>ul.appendChild(li);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>container.appendChild(ul);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} catch (e) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>container.innerHTML = "&lt;p&gt;Error loading schedule.&lt;/p&gt;";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function addMixcloud() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const url = document.getElementById('mixcloud-url').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!url) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const pass = prompt('Enter admin password to add a new show:');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (pass !== MIXCLOUD_PASSWORD) return alert('Incorrect password.');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const div = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>div.className = "mixcloud-container";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>div.innerHTML = `&lt;iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&amp;light=1&amp;feed=${encodeURIComponent(url)}"&gt;&lt;/iframe&gt;&lt;button class="delete-btn" onclick="deleteMixcloud(this)"&gt;Delete&lt;/button&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('mixcloud-list').prepend(div);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('mixcloud-url').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function deleteMixcloud(btn) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const pass = prompt('Enter admin password to delete this show:');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (pass !== MIXCLOUD_PASSWORD) return alert('Incorrect password.');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.parentElement.remove();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('popOutBtn').addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const src = document.getElementById('inlinePlayer').src;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const pop = window.open('', 'CCRPlayer', 'width=400,height=200,resizable=yes');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pop.document.write(`&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;&lt;title&gt;Cutters Choice Player&lt;/title&gt;&lt;style&gt;body{margin:0;background:#111;display:flex;align-items:center;justify-content:center;height:100vh}iframe{width:100%;height:180px;border:none;border-radius:4px}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;iframe src="${src}" allow="autoplay"&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;`);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pop.document.close();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">       </span>document.addEventListener('DOMContentLoaded', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>fetchLiveNow();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>fetchWeeklySchedule();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setInterval(fetchLiveNow, 30000);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
